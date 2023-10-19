@@ -60,15 +60,18 @@
 							Default
 						</td>
 						<td>
-							<a th:href="@{'/edit/' + ${p.id}}" class="btn btn-primary">Edit</a>
+							<a th:href="@{'/editPerson/' + ${p.id}}" class="btn btn-primary">Edit</a>
 						</td>
 						<td>
-							<a th:href="@{'/delete/' + ${p.id}}" class="btn btn-danger">Delete</a>
+							<a th:href="@{'/deletePerson/' + ${p.id}}" class="btn btn-danger">Delete</a>
 						</td>
 					</tr>
-
 				</tbody>
 			</table>
+			<!--
+			<a th:href="/addPerson" class="btn btn-success">Add Person</a>
+			-->
+			<a th:href="@{/addPerson}" class="btn btn-success">Add Person</a>
 		</div>
 	</div>
 </div>

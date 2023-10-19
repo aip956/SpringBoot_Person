@@ -1,11 +1,20 @@
 package com.example.springdemo.model;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+@Entity
 public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private int age;
     private float weight;
 
+    public Person() {
+        // Default no-arg constructor required by JPA
+    }
 
     @Override
     public String toString() {
